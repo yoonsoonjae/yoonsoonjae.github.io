@@ -13,13 +13,34 @@
         $prod= 1;
         for($i=1; $i <= $n; $i++)
         {
-            echo " {$i}";
+            if ($i < $n)
+            {
+                echo "{$i} + ";
+            }
+            else
+            {
+                echo "{$i} = ";
+            }
             $sum += $i;
+        }
+        
+        echo"{$sum}</br>";
+        
+        for($i=1; $i <= $n; $i++)
+        {
+            if ($i < $n)
+            {
+                echo "{$i} * ";
+            }
+            else
+            {
+                echo "{$i} = ";
+            }
             $prod *= $i;
         }
+        echo"{$prod}</br>";
         echo "<p>1부터 {$n}값까지의 합은 {$sum} 입니다.</br></p>";
         echo "<p>1부터 {$n}값까지의 곱은 {$prod} 입니다.</p>";
-
     }
 ?>
 </body>
